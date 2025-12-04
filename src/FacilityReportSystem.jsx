@@ -258,12 +258,18 @@ export default function FacilityReportSystem() {
     return (
       <div className="min-h-screen flex items-center justify-center p-4" style={{ background: `linear-gradient(135deg, ${HUFS.primaryLight}, #ffffff)` }}>
         <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl ring-1 ring-slate-100 p-8">
-          <div className="text-center mb-8">
-            <div className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg" style={{ backgroundColor: HUFS.primary }}>
-              <AlertCircle size={40} className="text-white" />
+          <div className="text-center mb-4">
+            <div className="mx-auto flex justify-center">
+              <img 
+                src="/logo.png" 
+                alt="뚝딱 로고" 
+                className="max-w-62 w-full h-auto"
+                onError={(e) => {
+                  // 이미지 로드 실패 시 대체 처리
+                  console.error("로고 이미지를 불러올 수 없습니다. /logo.png 파일이 public 폴더에 있는지 확인해주세요.");
+                }}
+              />
             </div>
-            <h1 className="text-2xl font-extrabold text-slate-900">한국외국어대학교</h1>
-            <p className="text-slate-600">시설물 신고 시스템</p>
           </div>
           <form className="space-y-5" onSubmit={handleLogin}>
             <div>
@@ -298,9 +304,11 @@ export default function FacilityReportSystem() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-white/10 ring-1 ring-white/20">
-                <UserCircle2 size={22} />
-              </div>
+              <img 
+                src="/logo-circle.png" 
+                alt="로고" 
+                className="w-14 h-14 object-contain"
+              />
               <div>
                 <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight">시설물 신고 시스템</h1>
                 <p className="text-white/70 text-xs">한국외국어대학교</p>
