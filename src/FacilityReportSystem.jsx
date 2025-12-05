@@ -386,7 +386,9 @@ const FacilityReportSystem = () => {
                   className="w-full px-3 py-2 border rounded-lg"
                 />
                 {reportForm.image && (
-                  <img src={reportForm.image} alt="Preview" className="mt-4 w-full h-40 object-cover rounded-lg" />
+                  <div className="mt-4 w-full h-110 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={reportForm.image} alt="Preview" className="max-w-full max-h-full object-contain" />
+                  </div>
                 )}
               </div>
 
@@ -564,7 +566,9 @@ const FacilityReportSystem = () => {
                 <p className="bg-gray-50 p-4 rounded-lg">{selectedReport.description}</p>
               </div>
               {selectedReport.image && (
-                <img src={selectedReport.image} alt="신고" className="w-full rounded-lg" />
+                <div className="w-full h-96 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                  <img src={selectedReport.image} alt="신고" className="max-w-full max-h-full object-contain" />
+                </div>
               )}
               {isAdmin && (
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t">
