@@ -216,12 +216,12 @@ const FacilityReportSystem = () => {
           <div className="text-center mb-8">
             <div className="mb-6">
               <img 
-                src="https://i.postimg.cc/FRGSLqpB/image.png" 
-                alt="똑딱 로고" 
-                className="w-32 h-32 mx-auto"
+                src="/logo-circle.png" 
+                alt="뚝딱 로고" 
+                className="w-48 h-48 mx-auto"
               />
             </div>
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">똑딱</h1>
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">뚝딱</h1>
             <p className="text-gray-600 font-medium">시설물 신고 시스템</p>
             <p className="text-sm text-gray-500 mt-2">한국외국어대학교</p>
           </div>
@@ -259,12 +259,12 @@ const FacilityReportSystem = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
               <img 
-                src="https://i.postimg.cc/FRGSLqpB/image.png" 
-                alt="똑딱" 
-                className="w-10 h-10"
+                src="/logo.png" 
+                alt="뚝딱" 
+                className="w-16 h-16"
               />
               <div>
-                <h1 className="text-xl font-bold">똑딱</h1>
+                <h1 className="text-xl font-bold">뚝딱</h1>
                 <p className="text-blue-200 text-xs">{isAdmin ? '관리자' : currentUser}</p>
               </div>
             </div>
