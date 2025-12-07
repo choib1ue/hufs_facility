@@ -221,7 +221,6 @@ const FacilityReportSystem = () => {
                 className="w-48 h-48 mx-auto"
               />
             </div>
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">뚝딱</h1>
             <p className="text-gray-600 font-medium">시설물 신고 시스템</p>
             <p className="text-sm text-gray-500 mt-2">한국외국어대학교</p>
           </div>
@@ -259,7 +258,7 @@ const FacilityReportSystem = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
               <img 
-                src="/logo.png" 
+                src="/logo-circle.png" 
                 alt="뚝딱" 
                 className="w-16 h-16"
               />
@@ -387,7 +386,7 @@ const FacilityReportSystem = () => {
                   className="w-full px-3 py-2 border rounded-lg"
                 />
                 {reportForm.image && (
-                  <img src={reportForm.image} alt="Preview" className="mt-4 w-full h-40 object-cover rounded-lg" />
+                  <img src={reportForm.image} alt="Preview" className="mt-4 w-full max-h-60 object-contain rounded-lg border" />
                 )}
               </div>
 
@@ -598,7 +597,9 @@ const FacilityReportSystem = () => {
                 <p className="bg-gray-50 p-4 rounded-lg">{selectedReport.description}</p>
               </div>
               {selectedReport.image && (
-                <img src={selectedReport.image} alt="신고" className="w-full rounded-lg" />
+                <div className="bg-gray-100 rounded-lg p-2">
+                  <img src={selectedReport.image} alt="신고" className="w-full max-h-96 object-contain rounded-lg" />
+                </div>
               )}
               {isAdmin && (
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t">
